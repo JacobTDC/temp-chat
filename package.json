@@ -1,0 +1,19 @@
+{
+  "name": "temp-chat",
+  "version": "1.0.0",
+  "description": "A chat room by JacobTDC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobTDC/temp-chat.git"
+  },
+  "author": "jacobtdc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacobTDC/temp-chat/issues"
+  },
+  "homepage": "https://github.com/JacobTDC/temp-chat#readme"
+}
