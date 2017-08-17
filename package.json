@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JacobTDC/temp-chat/issues"
   },
-  "homepage": "https://github.com/JacobTDC/temp-chat#readme"
+  "homepage": "https://github.com/JacobTDC/temp-chat#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
