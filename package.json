@@ -4,7 +4,7 @@
   "description": "A chat room by JacobTDC",
   "main": "index.js",
   "scripts": {
-    "start": "run.bat",
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
