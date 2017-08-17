@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      body {
+        color: white;
+        background-color: #23272A;
+        padding-top: 15%;
+      }
+      .child {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      button {
+        font-size: 1.5em;
+        height: 3em;
+      }
+      div.or {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+      }
+      div.or:before, div.or:after {
+        background-color: #fff;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: 25%;
+        width: 50%;
+      }
+      div.or:before {
+        right: 0.5em;
+        margin-left: -50%;
+      }
+      div.or:after {
+        left: 0.5em;
+        margin-right: -50%;
+      }
+      input {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="child">
+      <button class="w3-button w3-block w3-blue w3-round-large" type="button" onclick="$('#join').slideToggle();$('#create').slideUp();">Join Room</button>
+      <div class="form" id="join" style="display:none">
+        <form action="connect">
+          <label class="w3-input">Join Code:</label>
+          <input id="code" class="w3-input" type="text" placeholder="1aG5ds" name="code" autocomplete="off">
+          <input class="w3-input w3-button w3-blue" type="submit" value="Join">
+        </form>
+      </div>
+      <div class="or"><span>OR</span></div>
+      <form action="create"><button class="w3-button w3-block w3-green w3-round-large" type="submit">Create Room</button></form>
+    </div>
+  </body>
+</html>
