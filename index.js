@@ -2,6 +2,7 @@ const app = require('express')();
 const http = require('http');
 const net = require('net');
 const fs = require('fs');
+const path = require('path');
 
 const httpServer = http.Server(app);
 var port = process.env.PORT || 3000
@@ -24,10 +25,10 @@ app.get('/404', function(req, res){
 
 app.get('/*', function(req, res){
   let loc = req.params[0];
-  if (loc.length == 6) {
+  if (fs.existsSync(path.join('./public', req.path))) {
+    res.sendFile(path.join(__dirname, 'public', req.path));
+  } else if (loc.length == 6) {
     res.send(loc);
-  } else if (fs.existsSync(req.path)} {
-    res.sendFile(__dirname + '/public' + req.path);
   } else res.redirect('404');
 });
 
