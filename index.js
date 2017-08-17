@@ -20,7 +20,7 @@ app.get('/connect', function(req, res){
 });
 
 app.get('/404', function(req, res){
-  res.sendFile(__dirname + '/public/404.html');
+  res.sendFile(__dirname + '/public/404/index.html');
 });
 
 app.get('/*', function(req, res){
