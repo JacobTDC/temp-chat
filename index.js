@@ -33,10 +33,9 @@ app.get('*', function(req, res){
   res.status(404).sendFile(path.join(__dirname, '404.html'));
 });
 
-io.on('connection', (socket) => {
-  console.log('1');
+public.on('connection', (socket) => {
   socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
+    public.emit('chat message', msg);
   });
 });
 
